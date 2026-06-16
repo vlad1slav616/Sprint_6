@@ -1,3 +1,4 @@
+import allure
 import pytest
 
 from data import TestDataset
@@ -8,6 +9,9 @@ from urls import Urls
 
 class TestOrderCreation:
 
+    @allure.title(
+        "Проверка успешного оформления заказа"
+    )
     @pytest.mark.parametrize(
         "order_button, first_name, last_name, address, metro_station, "
         "phone_number, delivery_date, rental_period, scooter_color, "
@@ -61,6 +65,9 @@ class TestOrderCreation:
 
 class TestNavigationLogos:
 
+    @allure.title(
+        "Проверка перехода на главную страницу по логотипу Самокат"
+    )
     def test_click_on_scooter_logo_opens_home_page(
             self,
             browser
@@ -78,6 +85,9 @@ class TestNavigationLogos:
             == Urls.BASE_URL
         )
 
+    @allure.title(
+        "Проверка перехода на Дзен по логотипу Яндекс"
+    )
     def test_click_on_yandex_logo_redirects_to_dzen(
             self,
             browser

@@ -1,4 +1,4 @@
-from pages.main_page import MainPage
+from locators.main_page_locators import MainPageLocators
 
 
 class TestDataset:
@@ -40,7 +40,7 @@ class TestDataset:
 
     ORDER_CASES = [
         (
-            MainPage.TOP_ORDER_BUTTON,
+            MainPageLocators.TOP_ORDER_BUTTON,
             "Андрей",
             "Смирнов",
             "ул. Ленина, д. 21",
@@ -52,7 +52,7 @@ class TestDataset:
             "Домофон 12, подъезд 3"
         ),
         (
-            MainPage.BOTTOM_ORDER_BUTTON,
+            MainPageLocators.BOTTOM_ORDER_BUTTON,
             "Ольга",
             "Соколова",
             "пр-т Мира, д. 48",
